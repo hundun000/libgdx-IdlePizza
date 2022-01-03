@@ -1,15 +1,16 @@
-package hundun.gdxgame.bugindustry.ui.image;
+package hundun.gdxgame.idlepizza.ui.image;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import hundun.gdxgame.bugindustry.IdlePizzaGame;
-import hundun.gdxgame.bugindustry.logic.ConstructionId;
-import hundun.gdxgame.bugindustry.logic.ResourceType;
-import hundun.gdxgame.bugindustry.ui.component.GameAreaControlBoard;
-import hundun.gdxgame.bugindustry.ui.component.StorageInfoBoard;
+
 import hundun.gdxgame.idleframe.model.entity.GameEntity;
 import hundun.gdxgame.idleframe.model.entity.IGameEntityFactory;
 import hundun.gdxgame.idleframe.model.entity.RandomMoveEntity;
+import hundun.gdxgame.idlepizza.IdlePizzaGame;
+import hundun.gdxgame.idlepizza.logic.ConstructionId;
+import hundun.gdxgame.idlepizza.logic.ResourceType;
+import hundun.gdxgame.idlepizza.ui.component.GameAreaControlBoard;
+import hundun.gdxgame.idlepizza.ui.component.StorageInfoBoard;
 
 /**
  * @author hundun

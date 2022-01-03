@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry.ui.component;
+package hundun.gdxgame.idlepizza.ui.component;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -10,9 +10,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 
-import hundun.gdxgame.bugindustry.ui.screen.PlayScreen;
 import hundun.gdxgame.idleframe.listener.ILogicFrameListener;
 import hundun.gdxgame.idleframe.model.construction.base.BaseConstruction;
+import hundun.gdxgame.idlepizza.ui.screen.PlayScreen;
 
 
 /**
@@ -53,10 +53,6 @@ public class ConstructionControlNode extends Table implements ILogicFrameListene
             } 
         });
 
-        
-        
-        //this.setBounds(5 + SELF_WIDTH * index, 5, SELF_WIDTH, SELF_HEIGHT);
-        //this.setTouchable(Touchable.enabled);
         this.addListener(new ClickListener() {
             
             @Override
@@ -85,8 +81,22 @@ public class ConstructionControlNode extends Table implements ILogicFrameListene
             }
         });
         
-        
+        // ------ changeWorkingLevelGroup ------
         this.changeWorkingLevelGroup = new Table();
+
+        this.downWorkingLevelButton = new TextButton("-", parent.game.getButtonSkin());
+        downWorkingLevelButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                Gdx.app.log("ConstructionView", "down clicked");
+                model.getLevelComponent().changeWorkingLevel(-1);
+            } 
+        });
+        changeWorkingLevelGroup.add(downWorkingLevelButton).size(CHILD_WIDTH / 4, CHILD_HEIGHT);
+        
+        this.workingLevelLabel = new Label("", parent.game.getButtonSkin());
+        workingLevelLabel.setAlignment(Align.center);
+        changeWorkingLevelGroup.add(workingLevelLabel).size(CHILD_WIDTH / 2, CHILD_HEIGHT);
         
         this.upWorkingLevelButton = new TextButton("+", parent.game.getButtonSkin());
         upWorkingLevelButton.addListener(new ClickListener() {
@@ -96,28 +106,10 @@ public class ConstructionControlNode extends Table implements ILogicFrameListene
                 model.getLevelComponent().changeWorkingLevel(1);
             } 
         });
-        //upWorkingLevelButton.setSize(50, 50);
         changeWorkingLevelGroup.add(upWorkingLevelButton).size(CHILD_WIDTH / 4, CHILD_HEIGHT);
         
-        this.workingLevelLabel = new Label("", parent.game.getButtonSkin());
-        workingLevelLabel.setAlignment(Align.center);
-        changeWorkingLevelGroup.add(workingLevelLabel).size(CHILD_WIDTH / 2, CHILD_HEIGHT);
         
-        this.downWorkingLevelButton = new TextButton("-", parent.game.getButtonSkin());
-        downWorkingLevelButton.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                Gdx.app.log("ConstructionView", "down clicked");
-                model.getLevelComponent().changeWorkingLevel(-1);
-            } 
-        });
-        //downWorkingLevelButton.setSize(50, 50);
-        changeWorkingLevelGroup.add(downWorkingLevelButton).size(CHILD_WIDTH / 4, CHILD_HEIGHT);
-        
-        
-        //initAsNormalStyle();
-        
-        //this.debug();
+        // ------ this ------
         this.add(constructionNameLabel).size(CHILD_WIDTH, CHILD_HEIGHT).row();
         this.add(clickEffectButton).size(CHILD_WIDTH, CHILD_HEIGHT).row();
         this.add(changeWorkingLevelGroup).size(CHILD_WIDTH, CHILD_HEIGHT);
@@ -188,6 +180,20 @@ public class ConstructionControlNode extends Table implements ILogicFrameListene
         }
         
         boolean canUpWorkingLevel = model.getLevelComponent().canChangeWorkingLevel(1);
+        if (canUpWorkingLevel) {
+            upWorkingLevelButton.getLabel().setColor(Color.WHITE);
+        } else {
+            upWorkingLevelButton.setDisabled(true);
+            upWorkingLevelButton.getLabel().setColor(Color.RED);
+        }
+        
+        boolean canDownWorkingLevel = model.getLevelComponent().canChangeWorkingLevel(-1);
+        if (canDownWorkingLevel) {
+            downWorkingLevelButton.getLabel().setColor(Color.WHITE);
+        } else {
+            downWorkingLevelButton.setDisabled(true);
+            downWorkingLevelButton.getLabel().setColor(Color.RED);
+        }
         // ------ update model ------
         //model.onLogicFrame();
         

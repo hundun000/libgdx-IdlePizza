@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry.ui.component;
+package hundun.gdxgame.idlepizza.ui.component;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -17,9 +17,9 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
-import hundun.gdxgame.bugindustry.logic.GameArea;
-import hundun.gdxgame.bugindustry.ui.screen.PlayScreen;
 import hundun.gdxgame.idleframe.listener.IGameAreaChangeListener;
+import hundun.gdxgame.idlepizza.logic.GameArea;
+import hundun.gdxgame.idlepizza.ui.screen.PlayScreen;
 
 /**
  * @author hundun

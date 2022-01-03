@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry.ui.screen;
+package hundun.gdxgame.idlepizza.ui.screen;
 
 import lombok.Data;
 

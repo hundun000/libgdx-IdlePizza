@@ -1,12 +1,13 @@
-package hundun.gdxgame.bugindustry.ui.component;
+package hundun.gdxgame.idlepizza.ui.component;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.HorizontalGroup;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import hundun.gdxgame.bugindustry.IdlePizzaGame;
+
 import hundun.gdxgame.idleframe.BaseIdleGame;
 import hundun.gdxgame.idleframe.util.TextFormatUtils;
+import hundun.gdxgame.idlepizza.IdlePizzaGame;
 import lombok.Getter;
 
 /**

@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry;
+package hundun.gdxgame.idlepizza;
 
 import java.io.File;
 import java.util.Arrays;
@@ -8,11 +8,11 @@ import java.util.Map;
 
 import com.badlogic.gdx.Gdx;
 
-import hundun.gdxgame.bugindustry.logic.ConstructionId;
-import hundun.gdxgame.bugindustry.logic.BuiltinConstructionsLoader;
-import hundun.gdxgame.bugindustry.logic.GameArea;
-import hundun.gdxgame.bugindustry.logic.ResourceType;
 import hundun.gdxgame.idleframe.data.ChildGameConfig;
+import hundun.gdxgame.idlepizza.logic.BuiltinConstructionsLoader;
+import hundun.gdxgame.idlepizza.logic.ConstructionId;
+import hundun.gdxgame.idlepizza.logic.GameArea;
+import hundun.gdxgame.idlepizza.logic.ResourceType;
 import hundun.gdxgame.idlestarter.ConstructionsFileLoader;
 
 /**

@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry.ui.screen;
+package hundun.gdxgame.idlepizza.ui.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
@@ -10,18 +10,18 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import hundun.gdxgame.bugindustry.IdlePizzaGame;
-import hundun.gdxgame.bugindustry.logic.GameArea;
-import hundun.gdxgame.bugindustry.ui.component.AchievementMaskBoard;
-import hundun.gdxgame.bugindustry.ui.component.BackgroundImageBox;
-import hundun.gdxgame.bugindustry.ui.component.ConstructionControlBoard;
-import hundun.gdxgame.bugindustry.ui.component.GameAreaControlBoard;
 
-import hundun.gdxgame.bugindustry.ui.component.PopupInfoBoard;
-import hundun.gdxgame.bugindustry.ui.component.StorageInfoBoard;
-import hundun.gdxgame.bugindustry.ui.image.GameEntityFactory;
 import hundun.gdxgame.idleframe.model.AchievementPrototype;
 import hundun.gdxgame.idleframe.model.construction.base.BaseConstruction;
+import hundun.gdxgame.idlepizza.IdlePizzaGame;
+import hundun.gdxgame.idlepizza.logic.GameArea;
+import hundun.gdxgame.idlepizza.ui.component.AchievementMaskBoard;
+import hundun.gdxgame.idlepizza.ui.component.BackgroundImageBox;
+import hundun.gdxgame.idlepizza.ui.component.ConstructionControlBoard;
+import hundun.gdxgame.idlepizza.ui.component.GameAreaControlBoard;
+import hundun.gdxgame.idlepizza.ui.component.PopupInfoBoard;
+import hundun.gdxgame.idlepizza.ui.component.StorageInfoBoard;
+import hundun.gdxgame.idlepizza.ui.image.GameEntityFactory;
 import hundun.gdxgame.idlestarter.BasePlayScreen;
 import hundun.gdxgame.idlestarter.GameImageDrawHelper;
 

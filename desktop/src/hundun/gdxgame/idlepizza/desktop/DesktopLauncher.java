@@ -1,8 +1,9 @@
-package hundun.gdxgame.bugindustry.desktop;
+package hundun.gdxgame.idlepizza.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import hundun.gdxgame.bugindustry.IdlePizzaGame;
+
+import hundun.gdxgame.idlepizza.IdlePizzaGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {

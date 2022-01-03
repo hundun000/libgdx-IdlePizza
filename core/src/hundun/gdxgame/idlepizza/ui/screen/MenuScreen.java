@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry.ui.screen;
+package hundun.gdxgame.idlepizza.ui.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
@@ -8,8 +8,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import hundun.gdxgame.bugindustry.IdlePizzaGame;
+
 import hundun.gdxgame.idleframe.util.SaveUtils;
+import hundun.gdxgame.idlepizza.IdlePizzaGame;
 import hundun.gdxgame.idlestarter.BaseScreen;
 
 

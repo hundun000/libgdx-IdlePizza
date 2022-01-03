@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry.ui.component;
+package hundun.gdxgame.idlepizza.ui.component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +15,10 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 
-import hundun.gdxgame.bugindustry.ui.screen.PlayScreen;
 import hundun.gdxgame.idleframe.listener.IGameAreaChangeListener;
 import hundun.gdxgame.idleframe.listener.ILogicFrameListener;
 import hundun.gdxgame.idleframe.model.construction.base.BaseConstruction;
+import hundun.gdxgame.idlepizza.ui.screen.PlayScreen;
 import hundun.gdxgame.idlestarter.BasePlayScreen;
 
 
@@ -28,13 +28,12 @@ import hundun.gdxgame.idlestarter.BasePlayScreen;
  */
 public class ConstructionControlBoard extends Table implements ILogicFrameListener, IGameAreaChangeListener {
     
-    //public static int BOARD_DISTANCE_TO_FRAME = 10;
+
     public static int BOARD_BORDER_HEIGHT = 180;
     public static int LR_BUTTON_HEIGHT = 170;
+    public static int LR_BUTTON_WIDTH = 30;
     public static int SCOLL_AREA_HEIGHT = 150;
-    //public static int BOARD_WIDTH = 100;
-    
-    //public static int NODE_CELL_WIDTH = 110;
+
     
     PlayScreen parent;
     /**
@@ -42,7 +41,7 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
      */
     List<ConstructionControlNode> constructionControlNodes = new ArrayList<>();
 
-    int NUM_ALL = 7;
+    int NUM_ALL = 5;
     ImageButton leftButton;
     ImageButton rightButton;
     
@@ -55,11 +54,7 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
         this.parent = parent;
         
 
-//        ScrollPane scrollPane = new ScrollPane(initChild());
-//        //scrollPane.setSize(parent.game.LOGIC_WIDTH - 100, BOARD_HEIGHT);
-//        scrollPane.setFlickScroll(false);
-
-        leftButton = new ImageButton(BasePlayScreen.createBorderBoard(50, LR_BUTTON_HEIGHT, 0.8f, 3));
+        leftButton = new ImageButton(BasePlayScreen.createBorderBoard(LR_BUTTON_WIDTH, LR_BUTTON_HEIGHT, 0.8f, 3));
         leftButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -67,7 +62,7 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
 
             }
         });
-        rightButton = new ImageButton(BasePlayScreen.createBorderBoard(50, LR_BUTTON_HEIGHT, 0.8f, 3));
+        rightButton = new ImageButton(BasePlayScreen.createBorderBoard(LR_BUTTON_WIDTH, LR_BUTTON_HEIGHT, 0.8f, 3));
         rightButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -87,7 +82,7 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
         this.add(scrollPane).fill();
         this.add(rightButton);
         
-        //this.debugCell();
+        this.debugCell();
         //this.debugTable();
         //this.setSize(parent.game.LOGIC_WIDTH, BOARD_HEIGHT);
         //this.add(initChild());
@@ -107,9 +102,6 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
             var constructionView = new ConstructionControlNode(parent, i);
             constructionControlNodes.add(constructionView);
             var cell = table.add(constructionView).spaceRight(10);
-//            if (i % NUM_PER_ROW == NUM_PER_ROW - 1) {
-//                cell.row();
-//            }
         }
         //table.debugAll();
         table.debugCell();

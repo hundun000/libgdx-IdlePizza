@@ -1,4 +1,4 @@
-package hundun.gdxgame.bugindustry.ui.component;
+package hundun.gdxgame.idlepizza.ui.component;
 /**
  * @author hundun
  * Created on 2021/11/29
@@ -14,9 +14,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 
-import hundun.gdxgame.bugindustry.logic.GameArea;
-import hundun.gdxgame.bugindustry.ui.screen.PlayScreen;
 import hundun.gdxgame.idleframe.listener.IGameAreaChangeListener;
+import hundun.gdxgame.idlepizza.logic.GameArea;
+import hundun.gdxgame.idlepizza.ui.screen.PlayScreen;
 
 public class BackgroundImageBox extends Container<Image> implements IGameAreaChangeListener{
     PlayScreen parent;

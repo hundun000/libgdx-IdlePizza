@@ -1,10 +1,9 @@
-package hundun.gdxgame.bugindustry.logic;
+package hundun.gdxgame.idlepizza.logic;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import hundun.gdxgame.bugindustry.IdlePizzaGame;
 import hundun.gdxgame.idleframe.BaseIdleGame;
 import hundun.gdxgame.idleframe.model.construction.BaseAutoConstruction;
 import hundun.gdxgame.idleframe.model.construction.BaseClickGatherConstruction;
@@ -16,6 +15,7 @@ import hundun.gdxgame.idleframe.model.construction.base.OutputComponent;
 import hundun.gdxgame.idleframe.model.construction.base.UpgradeComponent;
 import hundun.gdxgame.idleframe.model.resource.ResourcePack;
 import hundun.gdxgame.idleframe.model.resource.ResourcePair;
+import hundun.gdxgame.idlepizza.IdlePizzaGame;
 
 /**
  * @author hundun
