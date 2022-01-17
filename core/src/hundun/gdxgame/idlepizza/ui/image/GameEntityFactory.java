@@ -148,20 +148,7 @@ public class GameEntityFactory implements IGameEntityFactory {
         entity.setRandomMove(false);
         return entity;
     }
-    
-    
-    private GameEntity newBeeEntity() {
-        GameEntity entity = new RandomMoveEntity(FLY_MAX_X, FLY_MAX_X, FLY_MAX_X, FLY_MAX_X, FLY_MAX_X);
-        entity.setTexture(new Sprite(game.getTextureManager().getBeeTexture()));
-        entity.setX((FLY_MAX_X - FLY_MIN_X) / 2);
-        entity.setY((FLY_MAX_Y - FLY_MIN_Y) / 2);
-        entity.setDrawWidth(BEE_WIDTH);
-        entity.setDrawHeight(BEE_HEIGHT);
-        entity.setRandomMove(true);
-        entity.setRandomMoveCount(0);
-        entity.checkRandomeMoveSpeedChange();
-        return entity;
-    }
+
 
     @Override
     public int calculateResourceDrawNum(String resourceId, long logicAmount) {

@@ -33,7 +33,7 @@ public class IdlePizzaGame extends BaseIdleGame {
     
     public IdlePizzaGame() {
         super(640, 480);
-        drawGameImageAndPlayAudio = false;
+        drawGameImageAndPlayAudio = true;
     }
     
     @Override
@@ -46,7 +46,7 @@ public class IdlePizzaGame extends BaseIdleGame {
         super.create();
        
         setScreen(screenContext.getMenuScreen());
-        getAudioPlayManager().intoMenu();
+        getAudioPlayManager().intoScreen(MenuScreen.class.getSimpleName());
     }
     
     @Override

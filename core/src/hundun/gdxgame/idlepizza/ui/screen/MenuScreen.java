@@ -56,7 +56,7 @@ public class MenuScreen extends BaseScreen<IdlePizzaGame> {
             public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
                 game.loadAndHookSave(true);
                 game.setScreen(game.getScreenContext().getGameBeeScreen());
-                game.getAudioPlayManager().intoGame();
+                game.getAudioPlayManager().intoScreen(PlayScreen.class.getSimpleName());
             }
             @Override
             public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
@@ -79,7 +79,7 @@ public class MenuScreen extends BaseScreen<IdlePizzaGame> {
             public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
                 game.loadAndHookSave(false);
                 game.setScreen(game.getScreenContext().getGameBeeScreen());
-                game.getAudioPlayManager().intoGame();
+                game.getAudioPlayManager().intoScreen(PlayScreen.class.getSimpleName());
             }
             @Override
             public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {

@@ -60,7 +60,6 @@ public class BuiltinConstructionsLoader {
             LevelComponent levelComponent = new LevelComponent(construction, false);
             construction.setLevelComponent(levelComponent);
             
-            construction.setMAX_DRAW_NUM(15);
             construction.updateDescription();
             constructions.add(construction);
         }
@@ -68,7 +67,7 @@ public class BuiltinConstructionsLoader {
             BaseConstruction construction = new BaseAutoConstruction(game, ConstructionId.CHESS_PROVIDER);
             construction.name = game.getGameDictionary().constructionIdToShowName(construction.getId());
             construction.detailDescroptionConstPart = "Auto gain some chess";
-            construction.descriptionPackage = BaseConstruction.WORKING_LEVEL_AUTO_DESCRIPTION_PACKAGE;
+            construction.descriptionPackage = BaseConstruction.MAX_LEVEL_AUTO_DESCRIPTION_PACKAGE;
             
             OutputComponent outputComponent = new OutputComponent(construction);
             outputComponent.setOutputGainPack(toPack(Map.of(
@@ -82,7 +81,7 @@ public class BuiltinConstructionsLoader {
                     )));
             construction.setUpgradeComponent(upgradeComponent);
             
-            LevelComponent levelComponent = new LevelComponent(construction, true);
+            LevelComponent levelComponent = new LevelComponent(construction, false);
             construction.setLevelComponent(levelComponent);
             
             construction.updateDescription();
@@ -92,7 +91,7 @@ public class BuiltinConstructionsLoader {
             BaseConstruction construction = new BaseAutoConstruction(game, ConstructionId.HAM_PROVIDER);
             construction.name = game.getGameDictionary().constructionIdToShowName(construction.getId());
             construction.detailDescroptionConstPart = "Auto gain some ham";
-            construction.descriptionPackage = BaseConstruction.WORKING_LEVEL_AUTO_DESCRIPTION_PACKAGE;
+            construction.descriptionPackage = BaseConstruction.MAX_LEVEL_AUTO_DESCRIPTION_PACKAGE;
             
             OutputComponent outputComponent = new OutputComponent(construction);
             outputComponent.setOutputGainPack(toPack(Map.of(
@@ -106,17 +105,17 @@ public class BuiltinConstructionsLoader {
                     )));
             construction.setUpgradeComponent(upgradeComponent);
             
-            LevelComponent levelComponent = new LevelComponent(construction, true);
+            LevelComponent levelComponent = new LevelComponent(construction, false);
             construction.setLevelComponent(levelComponent);
             
             construction.updateDescription();
             constructions.add(construction);
         } 
         {
-            BaseConstruction construction = new BaseAutoConstruction(game, ConstructionId.SPICE_PIZZA_MAKER);
+            BaseConstruction construction = new BaseAutoConstruction(game, ConstructionId.SPICE_PROVIDER);
             construction.name = game.getGameDictionary().constructionIdToShowName(construction.getId());
             construction.detailDescroptionConstPart = "Auto gain some spice";
-            construction.descriptionPackage = BaseConstruction.WORKING_LEVEL_AUTO_DESCRIPTION_PACKAGE;
+            construction.descriptionPackage = BaseConstruction.MAX_LEVEL_AUTO_DESCRIPTION_PACKAGE;
             
             OutputComponent outputComponent = new OutputComponent(construction);
             outputComponent.setOutputGainPack(toPack(Map.of(
@@ -130,7 +129,7 @@ public class BuiltinConstructionsLoader {
                     )));
             construction.setUpgradeComponent(upgradeComponent);
             
-            LevelComponent levelComponent = new LevelComponent(construction, true);
+            LevelComponent levelComponent = new LevelComponent(construction, false);
             construction.setLevelComponent(levelComponent);
             
             construction.updateDescription();
@@ -140,7 +139,7 @@ public class BuiltinConstructionsLoader {
             BaseConstruction construction = new BaseAutoConstruction(game, ConstructionId.TOMATO_PROVIDER);
             construction.name = game.getGameDictionary().constructionIdToShowName(construction.getId());
             construction.detailDescroptionConstPart = "Auto gain some tomato";
-            construction.descriptionPackage = BaseConstruction.WORKING_LEVEL_AUTO_DESCRIPTION_PACKAGE;
+            construction.descriptionPackage = BaseConstruction.MAX_LEVEL_AUTO_DESCRIPTION_PACKAGE;
             
             OutputComponent outputComponent = new OutputComponent(construction);
             outputComponent.setOutputGainPack(toPack(Map.of(
@@ -154,7 +153,7 @@ public class BuiltinConstructionsLoader {
                     )));
             construction.setUpgradeComponent(upgradeComponent);
             
-            LevelComponent levelComponent = new LevelComponent(construction, true);
+            LevelComponent levelComponent = new LevelComponent(construction, false);
             construction.setLevelComponent(levelComponent);
             
             construction.updateDescription();

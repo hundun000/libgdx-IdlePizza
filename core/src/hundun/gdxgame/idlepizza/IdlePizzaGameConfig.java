@@ -13,6 +13,7 @@ import hundun.gdxgame.idlepizza.logic.BuiltinConstructionsLoader;
 import hundun.gdxgame.idlepizza.logic.ConstructionId;
 import hundun.gdxgame.idlepizza.logic.GameArea;
 import hundun.gdxgame.idlepizza.logic.ResourceType;
+import hundun.gdxgame.idlepizza.ui.screen.MenuScreen;
 import hundun.gdxgame.idlestarter.ConstructionsFileLoader;
 
 /**
@@ -57,5 +58,17 @@ public class IdlePizzaGameConfig extends ChildGameConfig {
                 ConstructionId.CLASSICAL_PIZZA_MAKER, 1
                 );
         this.setConstructionStarterLevelMap(constructionStarterLevelMap);
+        
+        var constructionStarterWorkingLevelMap = Map.of(
+                ConstructionId.DOUGH_PROVIDER, true,
+                ConstructionId.CHESS_PROVIDER, true,
+                ConstructionId.CLASSICAL_PIZZA_MAKER, false
+                );
+        this.setConstructionStarterWorkingLevelMap(constructionStarterWorkingLevelMap);
+        
+        var screenIdToFilePathMap = Map.of(
+                MenuScreen.class.getSimpleName(), "audio/100116happybgm.ogg"
+                );
+        this.setScreenIdToFilePathMap(screenIdToFilePathMap);
     }
 }

@@ -26,9 +26,9 @@ public class TextureManager {
     TextureRegion defaultIcon;
     
     public TextureManager() {
-        winAreaBackgroundTexture = new Texture(Gdx.files.internal("bee-area.png"));
-        providersAreaBackgroundTexture = new Texture(Gdx.files.internal("shop-area.png"));
-        makersAreaBackgroundTexture = new Texture(Gdx.files.internal("forest-area.png"));
+        winAreaBackgroundTexture = new Texture(Gdx.files.internal("win-area.png"));
+        providersAreaBackgroundTexture = new Texture(Gdx.files.internal("providers-area.png"));
+        makersAreaBackgroundTexture = new Texture(Gdx.files.internal("makers-area.png"));
         winTexture = new Texture(Gdx.files.internal("win.png"));
         menuTexture = new Texture(Gdx.files.internal("menu.png"));
         
@@ -39,24 +39,24 @@ public class TextureManager {
             itemRegionMap.put(ResourceType.COIN, regions[0][1]);
             itemRegionMap.put(ResourceType.DOUGH, regions[0][2]);
             itemRegionMap.put(ResourceType.CHESS, regions[0][3]);
-            itemRegionMap.put(ResourceType.HAM, regions[0][4]);
-            itemRegionMap.put(ResourceType.SPICE, regions[0][5]);
-            itemRegionMap.put(ResourceType.TOMATO, regions[0][6]);
+            itemRegionMap.put(ResourceType.SPICE, regions[0][4]);
+            itemRegionMap.put(ResourceType.TOMATO, regions[0][5]);
+            itemRegionMap.put(ResourceType.HAM, regions[0][6]);
         }
         
         {
-            Texture texture = new Texture(Gdx.files.internal("construction.png"));
-            TextureRegion[][] regions = TextureRegion.split(texture, 16, 32);
+            Texture texture = new Texture(Gdx.files.internal("construction2.png"));
+            TextureRegion[][] regions = TextureRegion.split(texture, 24, 32);
             constructionRegionMap.put(ConstructionId.DOUGH_PROVIDER, regions[0][0]);
             constructionRegionMap.put(ConstructionId.CHESS_PROVIDER, regions[0][1]);
-            constructionRegionMap.put(ConstructionId.HAM_PROVIDER, regions[0][2]);
-            constructionRegionMap.put(ConstructionId.SPICE_PROVIDER, regions[0][3]);
-            constructionRegionMap.put(ConstructionId.TOMATO_PROVIDER, regions[0][4]);
+            constructionRegionMap.put(ConstructionId.SPICE_PROVIDER, regions[0][2]);
+            constructionRegionMap.put(ConstructionId.TOMATO_PROVIDER, regions[0][3]);
+            constructionRegionMap.put(ConstructionId.HAM_PROVIDER, regions[0][4]);
         }
         
         {
-            Texture texture = new Texture(Gdx.files.internal("selling.png"));
-            TextureRegion[][] regions = TextureRegion.split(texture, 48, 32);
+            Texture texture = new Texture(Gdx.files.internal("construction1.png"));
+            TextureRegion[][] regions = TextureRegion.split(texture, 16, 32);
             constructionRegionMap.put(ConstructionId.CLASSICAL_PIZZA_MAKER, regions[0][0]);
             constructionRegionMap.put(ConstructionId.DOUBLE_PIZZA_MAKER, regions[0][1]);
             constructionRegionMap.put(ConstructionId.TOMATO_PIZZA_MAKER, regions[0][2]);
