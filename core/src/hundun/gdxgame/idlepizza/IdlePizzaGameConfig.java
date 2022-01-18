@@ -55,6 +55,7 @@ public class IdlePizzaGameConfig extends ChildGameConfig {
         Map<String, Integer> constructionStarterLevelMap = Map.of(
                 ConstructionId.DOUGH_PROVIDER, 1,
                 ConstructionId.CHESS_PROVIDER, 1,
+                ConstructionId.HAM_PROVIDER, 1,
                 ConstructionId.CLASSICAL_PIZZA_MAKER, 1
                 );
         this.setConstructionStarterLevelMap(constructionStarterLevelMap);
@@ -62,6 +63,7 @@ public class IdlePizzaGameConfig extends ChildGameConfig {
         var constructionStarterWorkingLevelMap = Map.of(
                 ConstructionId.DOUGH_PROVIDER, true,
                 ConstructionId.CHESS_PROVIDER, true,
+                ConstructionId.HAM_PROVIDER, true,
                 ConstructionId.CLASSICAL_PIZZA_MAKER, false
                 );
         this.setConstructionStarterWorkingLevelMap(constructionStarterWorkingLevelMap);

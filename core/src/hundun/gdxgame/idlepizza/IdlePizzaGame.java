@@ -7,11 +7,13 @@ import java.util.Map;
 
 import hundun.gdxgame.idleframe.BaseIdleGame;
 import hundun.gdxgame.idleframe.data.ChildGameConfig;
+import hundun.gdxgame.idleframe.model.AchievementPrototype;
 import hundun.gdxgame.idleframe.model.construction.BaseConstructionFactory;
 import hundun.gdxgame.idlepizza.logic.BuiltinConstructionsLoader;
 import hundun.gdxgame.idlepizza.logic.ConstructionId;
 import hundun.gdxgame.idlepizza.logic.GameArea;
 import hundun.gdxgame.idlepizza.logic.GameDictionary;
+import hundun.gdxgame.idlepizza.logic.ResourceType;
 import hundun.gdxgame.idlepizza.logic.TextureManager;
 import hundun.gdxgame.idlepizza.ui.screen.MenuScreen;
 import hundun.gdxgame.idlepizza.ui.screen.PlayScreen;
@@ -44,7 +46,13 @@ public class IdlePizzaGame extends BaseIdleGame {
     @Override
     public void create () {
         super.create();
-       
+        // FIXME
+        getModelContext().getAchievementManager().addPrototype(
+                new AchievementPrototype("Game win", "You win the game!",
+                null,
+                Map.of(ResourceType.WIN_TROPHY, 1)
+                ));
+        
         setScreen(screenContext.getMenuScreen());
         getAudioPlayManager().intoScreen(MenuScreen.class.getSimpleName());
     }
@@ -60,5 +68,7 @@ public class IdlePizzaGame extends BaseIdleGame {
         screenContext.setMenuScreen(new MenuScreen(this));
         screenContext.setGameBeeScreen(new PlayScreen(this));
     }
+    
+    
     
 }

@@ -1,4 +1,4 @@
-This project created in [low-effort-jam-18](https://itch.io/jam/low-effort-jam-18) for the theme `Pizza`. It's low-effort as it reuses the self-made idle game framework from [another project](https://github.com/hundun000/BugIndustry) and uses simple textures.
+This project created in [low-effort-jam-18](https://itch.io/jam/low-effort-jam-18/rate/1358511) for the theme `Pizza`. It's low-effort as it reuses the self-made idle game framework from [another project](https://github.com/hundun000/BugIndustry) and uses simple textures.
 
 ## idle pizza
 
@@ -14,19 +14,11 @@ Download the zip. Use the win64 exe file, or the jar file.
 
 - The new game start with some working food material providers.
 
-![](./pic/1.jpg)
-
 - Area-change-button is on the right border. Now we change to ovens-area.
-
-![](./pic/2.jpg)
 
 - Some constuctions can swtich working-level by "+" / "-" button. Now we enable 1-level classical-pizza-oven and gain coins. 
 
-![](./pic/3.jpg)
-
 - Upgrade other constuctions if your can afford its upgrade-cost. And constuction only work if your can afford its auto-work-cost.
-
-![](./pic/4.jpg)
 
 ### Assert thanks
 

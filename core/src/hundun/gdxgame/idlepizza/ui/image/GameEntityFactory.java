@@ -44,70 +44,76 @@ public class GameEntityFactory implements IGameEntityFactory {
         switch (id) {
             case ConstructionId.CLASSICAL_PIZZA_MAKER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 0 * ConstructionEntity_BASE_X_PAD - ConstructionEntity_X_PAD * index,
+                        ConstructionEntity_BASE_X + 0 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         false,
                         id);
             case ConstructionId.DOUGH_PROVIDER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 0 * ConstructionEntity_BASE_X_PAD - ConstructionEntity_X_PAD * index,
+                        ConstructionEntity_BASE_X + 0 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         true,
                         id);
             case ConstructionId.DOUBLE_PIZZA_MAKER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 1 * ConstructionEntity_BASE_X_PAD - ConstructionEntity_X_PAD * index,
+                        ConstructionEntity_BASE_X + 1 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         false,
                         id); 
             case ConstructionId.CHESS_PROVIDER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 1 * ConstructionEntity_BASE_X_PAD - ConstructionEntity_X_PAD * index,
+                        ConstructionEntity_BASE_X + 1 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         true,
                         id); 
             case ConstructionId.SPICE_PIZZA_MAKER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 2 * ConstructionEntity_BASE_X_PAD - ConstructionEntity_X_PAD * index,
+                        ConstructionEntity_BASE_X + 2 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         false,
                         id); 
-            case ConstructionId.SPICE_PROVIDER:
+            case ConstructionId.HAM_PROVIDER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 2 * ConstructionEntity_BASE_X_PAD - ConstructionEntity_X_PAD * index,
+                        ConstructionEntity_BASE_X + 2 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         true,
                         id); 
             case ConstructionId.TOMATO_PIZZA_MAKER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 3 * ConstructionEntity_BASE_X_PAD,
+                        ConstructionEntity_BASE_X + 3 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         false,
                         id);
-            case ConstructionId.TOMATO_PROVIDER:
+            case ConstructionId.SPICE_PROVIDER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 3 * ConstructionEntity_BASE_X_PAD,
+                        ConstructionEntity_BASE_X + 3 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         true,
                         id); 
             case ConstructionId.SUPER_PIZZA_MAKER:
                 return newConstructionEntity(
-                        ConstructionEntity_BASE_X + 4 * ConstructionEntity_BASE_X_PAD,
+                        ConstructionEntity_BASE_X + 4 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
                         ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
                         false,
+                        id); 
+            case ConstructionId.TOMATO_PROVIDER:
+                return newConstructionEntity(
+                        ConstructionEntity_BASE_X + 4 * ConstructionEntity_BASE_X_PAD + ConstructionEntity_X_PAD * index,
+                        ConstructionEntity_BASE_Y - ConstructionEntity_Y_PAD * index,
+                        true,
                         id); 
             default:
                 return null;
                 //throw new UnsupportedOperationException("fail newConstructionEntity for id = " + id);
         }
     }
-    static final int scale = 2;
+    static final int scale = 3;
     static final int BEE_WIDTH = 64;
     static final int BEE_HEIGHT = 64;
-    static final int SELL_Construction_WIDTH = 48;
+    static final int SELL_Construction_WIDTH = 32;
     static final int SELL_Construction_HEIGHT = 32;
     static final int Construction_WIDTH = 32;
-    static final int Construction_HEIGHT = 64;
+    static final int Construction_HEIGHT = 32;
     static final int ConstructionEntity_BASE_X = 80;
     static final int ConstructionEntity_BASE_X_PAD = 90;
     static final int ConstructionEntity_BASE_Y = 250;
