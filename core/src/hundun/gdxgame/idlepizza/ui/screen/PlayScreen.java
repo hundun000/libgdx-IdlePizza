@@ -30,14 +30,7 @@ import hundun.gdxgame.idlestarter.GameImageDrawHelper;
  * Created on 2021/11/02
  */
 public class PlayScreen extends BasePlayScreen<IdlePizzaGame> {
- 
-    public Pixmap tableBackgroundPixmap;
-    public TextureRegionDrawable tableBackgroundDrawable;
-    public Pixmap tableBackgroundPixmap2;
-    public TextureRegionDrawable tableBackgroundDrawable2;
-    public Pixmap maskBackgroundPixmap;
-    public TextureRegionDrawable maskBackgroundDrawable;
-    
+
     private StorageInfoBoard storageInfoTable;
     private ConstructionControlBoard constructionControlBoard;
     private BackgroundImageBox backgroundImageBox;
@@ -56,19 +49,6 @@ public class PlayScreen extends BasePlayScreen<IdlePizzaGame> {
         super(game);
         popupUiStage = new Stage(new FitViewport(game.LOGIC_WIDTH, game.LOGIC_HEIGHT, uiStage.getCamera()));
         backUiStage = new Stage(new FitViewport(game.LOGIC_WIDTH, game.LOGIC_HEIGHT, uiStage.getCamera()));
-    
-        tableBackgroundPixmap = new Pixmap(1,1, Pixmap.Format.RGB565);
-        tableBackgroundPixmap.setColor(0.8f, 0.8f, 0.8f, 1.0f);
-        tableBackgroundPixmap.fill();
-        tableBackgroundDrawable = new TextureRegionDrawable(new TextureRegion(new Texture(tableBackgroundPixmap)));
-        tableBackgroundPixmap2 = new Pixmap(1,1, Pixmap.Format.RGB565);
-        tableBackgroundPixmap2.setColor(0.75f, 0.75f, 0.75f, 1.0f);
-        tableBackgroundPixmap2.fill();
-        tableBackgroundDrawable2 = new TextureRegionDrawable(new TextureRegion(new Texture(tableBackgroundPixmap2)));
-        maskBackgroundPixmap = new Pixmap(1,1, Pixmap.Format.RGB565);
-        maskBackgroundPixmap.setColor(1f, 1f, 1f, 0.3f);
-        maskBackgroundPixmap.fill();
-        maskBackgroundDrawable = new TextureRegionDrawable(new TextureRegion(new Texture(maskBackgroundPixmap)));
         
     }
     
@@ -91,7 +71,7 @@ public class PlayScreen extends BasePlayScreen<IdlePizzaGame> {
         
         
         storageInfoTable = new StorageInfoBoard(this);
-        uiRootTable.add(storageInfoTable).height(storageInfoTable.getHeight()).row();
+        uiRootTable.add(storageInfoTable).height(storageInfoTable.BOARD_BORDER_HEIGHT).row();
         
         gameAreaControlBoard = new GameAreaControlBoard(this, GameArea.values);
         uiRootTable.add(gameAreaControlBoard).expand().right().row();
@@ -99,7 +79,7 @@ public class PlayScreen extends BasePlayScreen<IdlePizzaGame> {
         constructionControlBoard = new ConstructionControlBoard(this);
         uiRootTable.add(constructionControlBoard).height(constructionControlBoard.BOARD_BORDER_HEIGHT);
         
-        uiRootTable.debugCell();
+        //uiRootTable.debugCell();
     }
     
     private void initBackUiAndPopupUi() {
@@ -115,7 +95,7 @@ public class PlayScreen extends BasePlayScreen<IdlePizzaGame> {
         popUpInfoBoard = new PopupInfoBoard(this);
         popupRootTable.add(popUpInfoBoard).bottom().expand().row();
         // empty image for hold the space
-        popupRootTable.add(new Image()).height(game.LOGIC_HEIGHT / 4);
+        popupRootTable.add(new Image()).height(game.LOGIC_HEIGHT / 2);
         
         achievementMaskBoard = new AchievementMaskBoard(this);
         popupUiStage.addActor(achievementMaskBoard);
@@ -169,10 +149,7 @@ public class PlayScreen extends BasePlayScreen<IdlePizzaGame> {
 
     @Override
     public void dispose() {
-        tableBackgroundPixmap.dispose();
         
-        tableBackgroundPixmap2.dispose();
-
     }
 
     public void hideAchievementMaskBoard() {

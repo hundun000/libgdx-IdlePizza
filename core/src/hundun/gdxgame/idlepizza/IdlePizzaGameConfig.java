@@ -33,7 +33,7 @@ public class IdlePizzaGameConfig extends ChildGameConfig {
             ConstructionId.DOUGH_PROVIDER,
             ConstructionId.CHESS_PROVIDER,
             ConstructionId.HAM_PROVIDER,
-            ConstructionId.SPICE_PIZZA_MAKER,
+            ConstructionId.SPICE_PROVIDER,
             ConstructionId.TOMATO_PROVIDER
         ));
         areaShownConstructionIds.put(GameArea.MAKERS, Arrays.asList(

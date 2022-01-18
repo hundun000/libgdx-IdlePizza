@@ -29,10 +29,9 @@ import hundun.gdxgame.idlestarter.BasePlayScreen;
 public class ConstructionControlBoard extends Table implements ILogicFrameListener, IGameAreaChangeListener {
     
 
-    public static int BOARD_BORDER_HEIGHT = 180;
-    public static int LR_BUTTON_HEIGHT = 170;
-    public static int LR_BUTTON_WIDTH = 30;
-    public static int SCOLL_AREA_HEIGHT = 150;
+    public static int BOARD_BORDER_HEIGHT = 120;
+    public static int LR_BUTTON_HEIGHT = BOARD_BORDER_HEIGHT;
+    public static int LR_BUTTON_WIDTH = 0;
 
     
     PlayScreen parent;
@@ -82,7 +81,7 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
         this.add(scrollPane).fill();
         this.add(rightButton);
         
-        this.debugCell();
+        //this.debugCell();
         //this.debugTable();
         //this.setSize(parent.game.LOGIC_WIDTH, BOARD_HEIGHT);
         //this.add(initChild());
@@ -96,7 +95,7 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
         Table table = new Table();
         //this.setBounds(BOARD_DISTANCE_TO_FRAME, BOARD_DISTANCE_TO_FRAME, Gdx.graphics.getWidth() - BOARD_DISTANCE_TO_FRAME * 2, BOARD_HEIGHT);
         //table.setSize(parent.game.LOGIC_WIDTH - 10, BOARD_HEIGHT - 10);
-        table.setBackground(BasePlayScreen.createBorderBoard(10, 5, 0.7f, 1));
+        table.setBackground(BasePlayScreen.createBorderBoard(150, 50, 0.7f, 2));
         
         for (int i = 0; i < NUM_ALL; i++) {
             var constructionView = new ConstructionControlNode(parent, i);
@@ -104,7 +103,7 @@ public class ConstructionControlBoard extends Table implements ILogicFrameListen
             var cell = table.add(constructionView).spaceRight(10);
         }
         //table.debugAll();
-        table.debugCell();
+        //table.debugCell();
         //table.debugTable();
         //table.setFillParent(true);
         return table;

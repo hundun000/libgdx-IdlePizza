@@ -8,9 +8,11 @@ import java.util.Set;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.Value;
 
 import hundun.gdxgame.idlepizza.logic.ResourceType;
 import hundun.gdxgame.idlepizza.ui.screen.PlayScreen;
+import hundun.gdxgame.idlestarter.BasePlayScreen;
 
 /**
  * @author hundun
@@ -18,9 +20,10 @@ import hundun.gdxgame.idlepizza.ui.screen.PlayScreen;
  */
 public class StorageInfoBoard extends Table {
     
-    public static int BOARD_DISTANCE_TO_FRAME_TOP = 10;
-    public static int BOARD_DISTANCE_TO_FRAME_SIDE = 10;
-    public static int BOARD_HEIGHT = 60;
+    public static final int BOARD_BORDER_HEIGHT = 60;
+//    public static int BOARD_DISTANCE_TO_FRAME_TOP = 10;
+//    public static int BOARD_DISTANCE_TO_FRAME_SIDE = 10;
+//    public static int BOARD_HEIGHT = 60;
     private static int NODE_HEIGHT = 25;
     private static int NODE_WIDTH = 120;
     
@@ -56,12 +59,12 @@ public class StorageInfoBoard extends Table {
     
     public StorageInfoBoard(PlayScreen parent) {
         this.parent = parent;
-        this.setBackground(parent.tableBackgroundDrawable);
-        this.setBounds(
-                BOARD_DISTANCE_TO_FRAME_SIDE, 
-                Gdx.graphics.getHeight() - BOARD_DISTANCE_TO_FRAME_TOP - BOARD_HEIGHT, 
-                Gdx.graphics.getWidth() - 2 * BOARD_DISTANCE_TO_FRAME_SIDE, 
-                BOARD_HEIGHT);
+        this.setBackground(BasePlayScreen.createBorderBoard(100, 15, 0.7f, 2));
+//        this.setBounds(
+//                BOARD_DISTANCE_TO_FRAME_SIDE, 
+//                Gdx.graphics.getHeight() - BOARD_DISTANCE_TO_FRAME_TOP - BOARD_HEIGHT, 
+//                Gdx.graphics.getWidth() - 2 * BOARD_DISTANCE_TO_FRAME_SIDE, 
+//                BOARD_HEIGHT);
 //        this.mainLabel = new Label("", parent.game.getButtonSkin());
 //        this.add(mainLabel);
         

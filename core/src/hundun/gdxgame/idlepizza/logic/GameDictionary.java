@@ -12,26 +12,26 @@ public class GameDictionary implements IGameDictionary {
     public String constructionIdToShowName(String constructionId) {
         switch (constructionId) {
             case ConstructionId.DOUGH_PROVIDER:
-                return "DOUGH_PROVIDER";
+                return "dough provider";
             case ConstructionId.CHESS_PROVIDER:
-                return "CHESS_PROVIDER";
+                return "chess provider";
             case ConstructionId.HAM_PROVIDER:
-                return "HAM_PROVIDER";
+                return "ham provider";
             case ConstructionId.SPICE_PROVIDER:
-                return "SPICE_PROVIDER";
+                return "spice provider";
             case ConstructionId.TOMATO_PROVIDER:
-                return "TOMATO_PROVIDER";      
+                return "tomato provider";      
                 
             case ConstructionId.CLASSICAL_PIZZA_MAKER:
-                return "CLASSICAL_PIZZA";
+                return "classical pizza oven";
             case ConstructionId.DOUBLE_PIZZA_MAKER:
-                return "DOUBLE_PIZZA";
+                return "double pizza oven";
             case ConstructionId.SPICE_PIZZA_MAKER:
-                return "SPICE_PIZZA";
+                return "spice pizza oven";
             case ConstructionId.TOMATO_PIZZA_MAKER:
-                return "TOMATO_PIZZA";
+                return "tomato pizza oven";
             case ConstructionId.SUPER_PIZZA_MAKER:
-                return "SUPER_PIZZA";    
+                return "super pizza oven";    
                 
             case ConstructionId.WIN_THE_GAME:
                 return "win goal";

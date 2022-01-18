@@ -17,15 +17,6 @@ import hundun.gdxgame.idlepizza.ui.component.StorageInfoBoard;
  * Created on 2021/11/26
  */
 public class GameEntityFactory implements IGameEntityFactory {
-    public float FLY_MIN_X;
-    public float FLY_MAX_X;
-    public float FLY_MIN_Y;
-    public float FLY_MAX_Y;
-    
-    public int TREE_MIN_X;
-    public int TREE_MAX_X;
-    public int TREE_MIN_Y;
-    public int TREE_MAX_Y;
     
     public float FLY_UNION_SPEED = 2;
 
@@ -44,17 +35,9 @@ public class GameEntityFactory implements IGameEntityFactory {
     public GameEntityFactory(IdlePizzaGame game) {
         this.game = game;
         
-        FLY_MAX_X = Gdx.graphics.getWidth() - GameAreaControlBoard.WIDTH;
-        FLY_MIN_X = BEE_WIDTH;
-        FLY_MAX_Y = Gdx.graphics.getHeight() - (StorageInfoBoard.BOARD_HEIGHT + StorageInfoBoard.BOARD_DISTANCE_TO_FRAME_TOP);
-        FLY_MIN_Y = FLY_MAX_Y - 200;
-        
-        TREE_MAX_X = Gdx.graphics.getWidth() - GameAreaControlBoard.WIDTH - scale * Construction_WIDTH;
-        TREE_MIN_X = 0;
-        TREE_MAX_Y = Gdx.graphics.getHeight() - (StorageInfoBoard.BOARD_HEIGHT + StorageInfoBoard.BOARD_DISTANCE_TO_FRAME_TOP) - scale * Construction_HEIGHT;
-        TREE_MIN_Y = TREE_MAX_Y - 100;
+
         //this.beehiveTexture = new Texture(Gdx.files.internal("beehive.png"));
-        Gdx.app.log(this.getClass().getSimpleName(), "TREE_MAX_Y = " + TREE_MAX_Y + ", TREE_MIN_Y = " + TREE_MIN_Y);
+        
     }
     
     public GameEntity newConstructionEntity(String id, int index) {

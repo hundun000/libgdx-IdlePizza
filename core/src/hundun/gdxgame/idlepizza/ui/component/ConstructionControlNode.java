@@ -31,18 +31,17 @@ public class ConstructionControlNode extends Table implements ILogicFrameListene
     
     Table changeWorkingLevelGroup;
 
-    int SELF_WIDTH = 120;
-    int SELF_HEIGHT = 100;
     
     int CHILD_WIDTH = 100;
     int CHILD_HEIGHT = 30;
-    
+    int NAME_CHILD_HEIGHT = 50;
     
     public ConstructionControlNode(PlayScreen parent, int index) {
         super();
         this.parent = parent;
         
         this.constructionNameLabel = new Label("", parent.game.getButtonSkin());
+        constructionNameLabel.setWrap(true);
         
         this.clickEffectButton = new TextButton("", parent.game.getButtonSkin());
         clickEffectButton.addListener(new ClickListener() {
@@ -110,7 +109,7 @@ public class ConstructionControlNode extends Table implements ILogicFrameListene
         
         
         // ------ this ------
-        this.add(constructionNameLabel).size(CHILD_WIDTH, CHILD_HEIGHT).row();
+        this.add(constructionNameLabel).size(CHILD_WIDTH, NAME_CHILD_HEIGHT).row();
         this.add(clickEffectButton).size(CHILD_WIDTH, CHILD_HEIGHT).row();
         this.add(changeWorkingLevelGroup).size(CHILD_WIDTH, CHILD_HEIGHT);
     }
