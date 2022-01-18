@@ -6,6 +6,10 @@ An idle game.
 
 Now You are a manager of a pizza restaurant. For no reason, you can gain free food material continuously. You also can use ovens make pizza by different recipes and gain cions, upgrade providers and ovens. Finally collect enough cions for the goal.
 
+![](./pic/1.jpg)
+
+![](./pic/1.jpg)
+
 ### release
 
 Download the zip. Use the win64 exe file, or the jar file.
