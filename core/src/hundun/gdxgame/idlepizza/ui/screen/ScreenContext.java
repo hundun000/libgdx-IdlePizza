@@ -1,5 +1,7 @@
 package hundun.gdxgame.idlepizza.ui.screen;
 
+import hundun.gdxgame.idlepizza.IdlePizzaGame;
+import hundun.gdxgame.idlestarter.ui.screen.menu.MenuScreen;
 import lombok.Data;
 
 /**
@@ -8,6 +10,6 @@ import lombok.Data;
  */
 @Data
 public class ScreenContext {
-    MenuScreen menuScreen;
+    MenuScreen<IdlePizzaGame> menuScreen;
     PlayScreen gameBeeScreen;
 }

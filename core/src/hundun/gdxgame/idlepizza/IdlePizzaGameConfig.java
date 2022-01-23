@@ -8,12 +8,14 @@ import java.util.Map;
 
 import com.badlogic.gdx.Gdx;
 
+
 import hundun.gdxgame.idleframe.data.ChildGameConfig;
+import hundun.gdxgame.idleframe.model.AchievementPrototype;
 import hundun.gdxgame.idlepizza.logic.BuiltinConstructionsLoader;
 import hundun.gdxgame.idlepizza.logic.ConstructionId;
 import hundun.gdxgame.idlepizza.logic.GameArea;
 import hundun.gdxgame.idlepizza.logic.ResourceType;
-import hundun.gdxgame.idlepizza.ui.screen.MenuScreen;
+import hundun.gdxgame.idlepizza.logic.ScreenId;
 import hundun.gdxgame.idlestarter.ConstructionsFileLoader;
 
 /**
@@ -69,8 +71,17 @@ public class IdlePizzaGameConfig extends ChildGameConfig {
         this.setConstructionStarterWorkingLevelMap(constructionStarterWorkingLevelMap);
         
         var screenIdToFilePathMap = Map.of(
-                MenuScreen.class.getSimpleName(), "audio/100116happybgm.ogg"
+                ScreenId.MENU, "audio/100116happybgm.ogg",
+                ScreenId.PLAY, "audio/100116happybgm.ogg"
                 );
         this.setScreenIdToFilePathMap(screenIdToFilePathMap);
+        
+        var achievementPrototypes = Arrays.asList(
+                new AchievementPrototype("Game win", "You win the game!",
+                        null,
+                        Map.of(ResourceType.WIN_TROPHY, 1)
+                        )
+                );
+        this.setAchievementPrototypes(achievementPrototypes);
     }
 }

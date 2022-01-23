@@ -10,8 +10,8 @@ public class DesktopLauncher {
 		
 	    IdlePizzaGame game = new IdlePizzaGame();
 	    LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.width = (int) (game.LOGIC_WIDTH * IdlePizzaGame.desktopScale);
-		config.height = (int) (game.LOGIC_HEIGHT * IdlePizzaGame.desktopScale);
+		config.width = (int) (game.LOGIC_WIDTH * game.desktopScale);
+		config.height = (int) (game.LOGIC_HEIGHT * game.desktopScale);
 		new LwjglApplication(game, config);
 	}
 }

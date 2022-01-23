@@ -63,7 +63,7 @@ project(":core") {
 
 
     dependencies {
-        api 'com.github.hundun000:BugIndustry:55849ba5f8'
+        api 'com.github.hundun000:BugIndustry:4fb002c5b8'
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         compileOnly 'org.projectlombok:lombok:1.18.4'
