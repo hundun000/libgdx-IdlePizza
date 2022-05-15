@@ -1,22 +1,18 @@
 package hundun.gdxgame.idlepizza.logic;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
-import hundun.gdxgame.idleframe.model.manager.AbstractTextureManager;
-import lombok.Getter;
+import hundun.gdxgame.idleshare.framework.model.manager.AbstractTextureManager;
 
 public class TextureManager extends AbstractTextureManager {
 
-    
+
     public TextureManager() {
         winTexture = new Texture(Gdx.files.internal("win.png"));
         menuTexture = new Texture(Gdx.files.internal("menu.png"));
-        
+
         {
             Texture texture = new Texture(Gdx.files.internal("item.png"));
             TextureRegion[][] regions = TextureRegion.split(texture, 16, 16);
@@ -29,7 +25,7 @@ public class TextureManager extends AbstractTextureManager {
             resourceIconMap.put(ResourceType.HAM, regions[0][6]);
             resourceIconMap.put(ResourceType.WIN_TROPHY, regions[0][8]);
         }
-        
+
         {
             Texture texture = new Texture(Gdx.files.internal("construction2.png"));
             TextureRegion[][] regions = TextureRegion.split(texture, 32, 32);
@@ -39,7 +35,7 @@ public class TextureManager extends AbstractTextureManager {
             constructionEntityMap.put(ConstructionId.TOMATO_PROVIDER, regions[0][3]);
             constructionEntityMap.put(ConstructionId.HAM_PROVIDER, regions[0][4]);
         }
-        
+
         {
             Texture texture = new Texture(Gdx.files.internal("construction1.png"));
             TextureRegion[][] regions = TextureRegion.split(texture, 32, 32);
@@ -69,6 +65,6 @@ public class TextureManager extends AbstractTextureManager {
             gameAreaBackMap.put(GameArea.WIN, regions[0][3]);
         }
     }
-    
-    
+
+
 }

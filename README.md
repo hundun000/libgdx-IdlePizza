@@ -4,11 +4,11 @@ This project created in [low-effort-jam-18](https://itch.io/jam/low-effort-jam-1
 
 An idle game. 
 
-Now You are a manager of a pizza restaurant. For no reason, you can gain free food material continuously. You also can use ovens make pizza by different recipes and gain cions, upgrade providers and ovens. Finally collect enough cions for the goal.
+Now You are a manager of a pizza restaurant. For no reason, you can gain free food material continuously. You also can use ovens make pizza by different recipes and gain cions, upgrade providers and ovens. Finally collect enough coins for the goal.
 
 ![](./pic/1.jpg)
 
-![](./pic/1.jpg)
+![](./pic/2.jpg)
 
 ### release
 
@@ -20,11 +20,11 @@ Download the zip. Use the win64 exe file, or the jar file.
 
 - Area-change-button is on the right border. Now we change to ovens-area.
 
-- Some constuctions can swtich working-level by "+" / "-" button. Now we enable 1-level classical-pizza-oven and gain coins. 
+- Some constructions can switch working-level by "+" / "-" button. Now we enable 1-level classical-pizza-oven and gain coins. 
 
-- Upgrade other constuctions if your can afford its upgrade-cost. And constuction only work if your can afford its auto-work-cost.
+- Upgrade other constructions if your can afford its upgrade-cost. And construction only work if your can afford its auto-work-cost.
 
-### Assert thanks
+### Resources thanks
 
 Audio:
 https://opengameart.org/content/happy-bgm-100116

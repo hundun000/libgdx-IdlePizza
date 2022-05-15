@@ -1,17 +1,12 @@
 package hundun.gdxgame.idlepizza.ui.image;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.Sprite;
-
-import hundun.gdxgame.idleframe.model.entity.BaseGameEntityFactory;
-import hundun.gdxgame.idleframe.model.entity.GameEntity;
-
-import hundun.gdxgame.idleframe.model.entity.RandomMoveEntity;
 import hundun.gdxgame.idlepizza.IdlePizzaGame;
 import hundun.gdxgame.idlepizza.logic.ConstructionId;
 import hundun.gdxgame.idlepizza.logic.ResourceType;
-import hundun.gdxgame.idlestarter.ui.screen.play.BasePlayScreen;
-import hundun.gdxgame.idlestarter.ui.screen.play.PlayScreenLayoutConst;
+import hundun.gdxgame.idleshare.framework.model.entity.BaseGameEntityFactory;
+import hundun.gdxgame.idleshare.framework.model.entity.GameEntity;
+import hundun.gdxgame.idleshare.starter.ui.screen.play.BasePlayScreen;
+import hundun.gdxgame.idleshare.starter.ui.screen.play.PlayScreenLayoutConst;
 
 
 /**
@@ -19,26 +14,27 @@ import hundun.gdxgame.idlestarter.ui.screen.play.PlayScreenLayoutConst;
  * Created on 2021/11/26
  */
 public class GameEntityFactory extends BaseGameEntityFactory {
-    
+
     public float FLY_UNION_SPEED = 2;
 
     public float RESOURCE_MAX_DRAW_NUM = 5;
-    
+
     ResourceType type;
     int baseX;
     int baseY;
     //TextureRegion textureRegion;
-    
+
     //private Texture beeTexture;
     //private Texture beehiveTexture;
-    
+
     IdlePizzaGame game;
-    
+
     public GameEntityFactory(PlayScreenLayoutConst layoutConst, BasePlayScreen<IdlePizzaGame> parent) {
         super(layoutConst, parent);
 
     }
-    
+
+    @Override
     public GameEntity newConstructionEntity(String id, int index) {
         switch (id) {
             case ConstructionId.CLASSICAL_PIZZA_MAKER:
@@ -46,7 +42,7 @@ public class GameEntityFactory extends BaseGameEntityFactory {
                 return this.columnStableConstructionEntity(id, index, 0);
             case ConstructionId.DOUBLE_PIZZA_MAKER:
             case ConstructionId.CHESS_PROVIDER:
-                return this.columnStableConstructionEntity(id, index, 1); 
+                return this.columnStableConstructionEntity(id, index, 1);
             case ConstructionId.SPICE_PIZZA_MAKER:
             case ConstructionId.HAM_PROVIDER:
                 return this.columnStableConstructionEntity(id, index, 2);
@@ -74,14 +70,15 @@ public class GameEntityFactory extends BaseGameEntityFactory {
         return (int) Math.min(max, logicAmount);
     }
 
+
     @Override
-    public GameEntity newResourceEntity(String resourceId) {
+    public GameEntity newResourceEntity(String resourceId, int index) {
         switch (resourceId) {
             default:
                 return null;
         }
     }
 
-    
-    
+
+
 }

@@ -1,6 +1,6 @@
 package hundun.gdxgame.idlepizza.logic;
 
-import hundun.gdxgame.idleframe.util.IGameDictionary;
+import hundun.gdxgame.idleshare.framework.util.text.IGameDictionary;
 
 /**
  * @author hundun
@@ -8,7 +8,8 @@ import hundun.gdxgame.idleframe.util.IGameDictionary;
  */
 public class GameDictionary implements IGameDictionary {
 
-    
+
+    @Override
     public String constructionIdToShowName(String constructionId) {
         switch (constructionId) {
             case ConstructionId.DOUGH_PROVIDER:
@@ -20,8 +21,8 @@ public class GameDictionary implements IGameDictionary {
             case ConstructionId.SPICE_PROVIDER:
                 return "spice provider";
             case ConstructionId.TOMATO_PROVIDER:
-                return "tomato provider";      
-                
+                return "tomato provider";
+
             case ConstructionId.CLASSICAL_PIZZA_MAKER:
                 return "classical pizza oven";
             case ConstructionId.DOUBLE_PIZZA_MAKER:
@@ -31,12 +32,12 @@ public class GameDictionary implements IGameDictionary {
             case ConstructionId.TOMATO_PIZZA_MAKER:
                 return "tomato pizza oven";
             case ConstructionId.SUPER_PIZZA_MAKER:
-                return "super pizza oven";    
-                
+                return "super pizza oven";
+
             case ConstructionId.WIN_THE_GAME:
                 return "win goal";
 
-    
+
             default:
                 return "[dic:" + constructionId + "]";
         }

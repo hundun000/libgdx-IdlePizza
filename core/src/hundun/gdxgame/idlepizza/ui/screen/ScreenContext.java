@@ -1,7 +1,7 @@
 package hundun.gdxgame.idlepizza.ui.screen;
 
 import hundun.gdxgame.idlepizza.IdlePizzaGame;
-import hundun.gdxgame.idlestarter.ui.screen.menu.MenuScreen;
+import hundun.gdxgame.idleshare.starter.ui.screen.menu.MenuScreen;
 import lombok.Data;
 
 /**

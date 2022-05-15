@@ -1,36 +1,33 @@
 package hundun.gdxgame.idlepizza;
 
-import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.badlogic.gdx.Gdx;
-
-
-import hundun.gdxgame.idleframe.data.ChildGameConfig;
-import hundun.gdxgame.idleframe.model.AchievementPrototype;
 import hundun.gdxgame.idlepizza.logic.BuiltinConstructionsLoader;
 import hundun.gdxgame.idlepizza.logic.ConstructionId;
 import hundun.gdxgame.idlepizza.logic.GameArea;
 import hundun.gdxgame.idlepizza.logic.ResourceType;
 import hundun.gdxgame.idlepizza.logic.ScreenId;
-import hundun.gdxgame.idlestarter.ConstructionsFileLoader;
+import hundun.gdxgame.idleshare.framework.data.ChildGameConfig;
+import hundun.gdxgame.idleshare.framework.data.StarterData;
+import hundun.gdxgame.idleshare.framework.model.AchievementPrototype;
+import hundun.gdxgame.idleshare.framework.util.JavaHighVersionFeature;
 
 /**
  * @author hundun
  * Created on 2022/01/11
  */
 public class IdlePizzaGameConfig extends ChildGameConfig {
-    
+
     public IdlePizzaGameConfig(IdlePizzaGame game) {
 //        File configFile = Gdx.files.internal("constructions.json").file();
 //        ConstructionsFileLoader constructionsLoader = new ConstructionsFileLoader(game, game.getGameDictionary(), configFile);
         BuiltinConstructionsLoader builtinConstructionsLoader = new BuiltinConstructionsLoader(game);
         this.setConstructions(builtinConstructionsLoader.load());
-        
-        Map<String, List<String>> areaShownConstructionIds = new HashMap<>(); 
+
+        Map<String, List<String>> areaShownConstructionIds = new HashMap<>();
         areaShownConstructionIds.put(GameArea.PROVODERS, Arrays.asList(
             ConstructionId.DOUGH_PROVIDER,
             ConstructionId.CHESS_PROVIDER,
@@ -49,33 +46,37 @@ public class IdlePizzaGameConfig extends ChildGameConfig {
                 ConstructionId.WIN_THE_GAME
         ));
         this.setAreaControlableConstructionIds(areaShownConstructionIds);
-        this.setAreaShowEntityConstructionIds(areaShownConstructionIds);
+        this.setAreaShowEntityByOwnAmountConstructionIds(areaShownConstructionIds);
+
+        Map<String, List<String>> areaShownResourceIds = new HashMap<>();
+        this.setAreaShowEntityByOwnAmountResourceIds(areaShownResourceIds);
+
+        Map<String, List<String>> areaShowEntityByChangeAmountResourceIds = new HashMap<>(); 
+        this.setAreaShowEntityByChangeAmountResourceIds(areaShowEntityByChangeAmountResourceIds);
         
-        Map<String, List<String>> areaShownResourceIds = new HashMap<>(); 
-        this.setAreaShowEntityResourceIds(areaShownResourceIds);
-        
+        StarterData starterData = new StarterData();
         Map<String, Integer> constructionStarterLevelMap = Map.of(
                 ConstructionId.DOUGH_PROVIDER, 1,
                 ConstructionId.CHESS_PROVIDER, 1,
                 ConstructionId.HAM_PROVIDER, 1,
                 ConstructionId.CLASSICAL_PIZZA_MAKER, 1
                 );
-        this.setConstructionStarterLevelMap(constructionStarterLevelMap);
-        
+        starterData.setConstructionStarterLevelMap(constructionStarterLevelMap);
         var constructionStarterWorkingLevelMap = Map.of(
                 ConstructionId.DOUGH_PROVIDER, true,
                 ConstructionId.CHESS_PROVIDER, true,
                 ConstructionId.HAM_PROVIDER, true,
                 ConstructionId.CLASSICAL_PIZZA_MAKER, false
                 );
-        this.setConstructionStarterWorkingLevelMap(constructionStarterWorkingLevelMap);
-        
+        starterData.setConstructionStarterWorkingLevelMap(constructionStarterWorkingLevelMap);
+        this.setStarterData(starterData);
+
         var screenIdToFilePathMap = Map.of(
                 ScreenId.MENU, "audio/100116happybgm.ogg",
                 ScreenId.PLAY, "audio/100116happybgm.ogg"
                 );
         this.setScreenIdToFilePathMap(screenIdToFilePathMap);
-        
+
         var achievementPrototypes = Arrays.asList(
                 new AchievementPrototype("Game win", "You win the game!",
                         null,

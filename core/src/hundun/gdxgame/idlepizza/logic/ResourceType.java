@@ -15,9 +15,8 @@ public class ResourceType {
     public static final String SPICE = "ENUM_RESC@SPICE";
     public static final String TOMATO = "ENUM_RESC@TOMATO";
     public static final String COIN = "ENUM_RESC@COIN";
-    
+
     public static final String WIN_TROPHY = "ENUM_RESC@TROPHY";
-    ;
-    
+
     public static final List<String> VALUES_FOR_SHOW_ORDER = Arrays.asList(COIN, DOUGH, CHESS, HAM, SPICE, TOMATO);
 }
